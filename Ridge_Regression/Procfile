@@ -1,1 +1,1 @@
-web: gunicorn Ridge_Regression/application:application
+web: gunicorn Ridge_Regression.application:application
