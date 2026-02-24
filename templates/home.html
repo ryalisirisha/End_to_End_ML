@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <div class = 'login'>
+            <h1> FWI Prediction</h1>
+
+            <!-- Main input for receiving Query for ML -->
+             <form action = "{{url_for('predict')}}" method = "post">
+                <input  type = "text" name="Temperature" placeholder="Temperature" required = "required" /><br>
+                <input  type = "text" name="RH" placeholder="Relative Humidity" required = "required" /><br>
+                <input  type = "text" name="Ws" placeholder="WindSpeed" required = "required" /><br>
+                <input  type = "text" name="Rain" placeholder="Rainfall" required = "required" /><br>
+                <input  type = "text" name="FFMC" placeholder="Fine Fuel Moisture Code" required = "required" /><br>
+                <input  type = "text" name="DMC" placeholder="Duff Moisture Code" required = "required" /><br>
+                <input  type = "text" name="ISI" placeholder="Initial Spread Index" required = "required" /><br>
+                <input  type = "text" name="Classes" placeholder="Classes" required = "required" /><br>
+                <input  type = "text" name="Region" placeholder="Region" required = "required" /><br>
+               
+
+
+                <button type = "submit" class="btn btn-primary btn-block btn-large">Predict</button>
+             </form>
+
+             <h2>
+                The predicted Fire Weather Index (FWI) is : {{ results}}
+             </h2>
+
+
+
+        </div>
+    </body>
+</html>
